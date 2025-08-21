@@ -71,7 +71,6 @@
     CONFIG_PACKAGE_luci-app-socat=y  # Socat端口转发工具
     CONFIG_PACKAGE_luci-app-ttyd=y  # Web终端
     CONFIG_PACKAGE_luci-app-zerotier=y  # ZeroTier虚拟网络
-    CONFIG_PACKAGE_luci-theme-argon=y  # Argon主题
     ```
 
 </details>
