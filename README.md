@@ -70,7 +70,6 @@
     CONFIG_PACKAGE_luci-app-samba4=y  # Samba文件共享
     CONFIG_PACKAGE_luci-app-socat=y  # Socat端口转发工具
     CONFIG_PACKAGE_luci-app-ttyd=y  # Web终端
-    CONFIG_PACKAGE_luci-app-wolplus=y  # 网络唤醒
     CONFIG_PACKAGE_luci-app-zerotier=y  # ZeroTier虚拟网络
     CONFIG_PACKAGE_luci-theme-argon=y  # Argon主题
     ```
