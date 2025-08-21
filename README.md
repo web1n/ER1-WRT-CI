@@ -63,7 +63,6 @@
     
     ```
     CONFIG_PACKAGE_luci-app-homeproxy=y // OWRT
-    CONFIG_PACKAGE_luci-app-advancedplus=y  # 高级设置
     CONFIG_PACKAGE_luci-app-alist=y  # Alist网络服务
     CONFIG_PACKAGE_luci-app-cpufreq=y  # CPU频率策略控制
     CONFIG_PACKAGE_luci-app-ddns=y  # 动态DNS客户端

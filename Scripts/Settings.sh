@@ -28,9 +28,6 @@ sed -i "s/\[sid\]\.hasOwnProperty/\[sid\]\?\.hasOwnProperty/g" $(find ./feeds/lu
 # sed -i 's/services/network/g' $(find ./ -type f -path "*/luci-app-alist/root/usr/share/luci/menu.d/*" -name "luci-app-upnp.json")
 # sed -i 's/services/nas/g' $(find ./ -type f -path "*/luci-app-alist/root/usr/share/luci/menu.d/*" -name "luci-app-alist.json")
 # sed -i 's/admin\/status/admin\/vpn/g' $(find ./ -type f -path "*/luci-proto-wireguard/root/usr/share/luci/menu.d/*" -name "luci-proto-wireguard.json")
-# #移除advancedplus无用功能
-# sed -i '/advancedplus\/advancedset/d' $(find ./ -type f -path "*/luci-app-advancedplus/luasrc/controller/*" -name "advancedplus.lua")
-# sed -i '/advancedplus\/advancedipk/d' $(find ./ -type f -path "*/luci-app-advancedplus/luasrc/controller/*" -name "advancedplus.lua")
 
 #调整位置
 sed -i 's/services/system/g' $(find ./**/luci-app-ttyd/root/usr/share/luci/menu.d/ -type f -name "luci-app-ttyd.json")
@@ -42,11 +39,6 @@ sed -i 's/services/nas/g' $(find ./**/luci-app-openlist2/root/usr/share/luci/men
 
 sed -i 's/admin\/status/admin\/vpn/g' $(find ./**/luci-proto-wireguard/root/usr/share/luci/menu.d/ -type f -name "luci-proto-wireguard.json")
 
-#移除advancedplus无用功能
-sed -i '/advancedplus\/advancedset/d' $(find ./**/luci-app-advancedplus/luasrc/controller/ -type f -name "advancedplus.lua")
-sed -i '/advancedplus\/advancedipk/d' $(find ./**/luci-app-advancedplus/luasrc/controller/ -type f -name "advancedplus.lua")
-sed -i '/^start() {/,/^}$/ { /advancedset/s/^\(.*advancedset.*\)$/#\1/ }' $(find ./**/luci-app-advancedplus/root/etc/ -type f -name "advancedplus")
- 
 WRT_IPPART=$(echo $WRT_IP | cut -d'.' -f1-3)
 # #修复Openvpnserver无法连接局域网和外网问题
 # if [ -f "./package/network/config/firewall/files/firewall.user" ]; then
