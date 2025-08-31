@@ -133,8 +133,7 @@ define Device/jdcloud_re-cs-07-12m
 	$(call Device/FitImage)
 	$(call Device/EmmcImage)
 	DEVICE_VENDOR := JDCloud
-	DEVICE_MODEL := RE-CS-07
-	DEVICE_VARIANT := 12M kernel
+	DEVICE_MODEL := RE-CS-07 (12M kernel)
 	KERNEL_SIZE := 12288k
 	BLOCKSIZE := 128k
 	SOC := ipq6010
