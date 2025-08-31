@@ -125,3 +125,23 @@ fi
 #    echo "CONFIG_PACKAGE_kmod-usb-net-qmi-wwan-quectel=n" >> ./.config
 #	echo "LiBwrt CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=n!"
 #fi
+
+# 增加 ER1 12M 内核支持
+cp ./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/ipq6010-re-cs-07.dts ./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/ipq6010-re-cs-07-12m.dts
+echo '
+define Device/jdcloud_re-cs-07-12m
+	$(call Device/FitImage)
+	$(call Device/EmmcImage)
+	DEVICE_VENDOR := JDCloud
+	DEVICE_MODEL := RE-CS-07
+	DEVICE_VARIANT := 12M kernel
+	KERNEL_SIZE := 12288k
+	BLOCKSIZE := 128k
+	SOC := ipq6010
+	DEVICE_DTS_CONFIG := config@cp03-c4
+	DEVICE_PACKAGES := -ath11k-firmware-ipq6018 -ath11k-firmware-qcn9074 -kmod-ath11k -kmod-ath11k-ahb -kmod-ath11k-pci -hostapd-common -wpad-openssl
+	IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-rootfs | append-metadata
+endef
+
+TARGET_DEVICES += jdcloud_re-cs-07-12m
+' >> ./target/linux/qualcommax/image/ipq60xx.mk
