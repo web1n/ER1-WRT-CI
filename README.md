@@ -30,6 +30,7 @@ luci-app-diskman
 ```
 luci-app-dae
 luci-app-daed
+luci-app-dockerman
 ```
 
 ## 固件源码(带NSS) 
