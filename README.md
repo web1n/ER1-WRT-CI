@@ -21,6 +21,7 @@ luci-app-upnp
 luci-app-vlmcsd
 luci-app-arpbind
 luci-app-smartdns
+luci-app-msd_lite
 ```
 
 12m 内核固件增加的软件包:

@@ -15,6 +15,7 @@ CONFIG_PACKAGE_luci-app-vlmcsd=y
 CONFIG_PACKAGE_luci-app-arpbind=y
 CONFIG_PACKAGE_luci-app-smartdns=y
 CONFIG_PACKAGE_luci-app-homeproxy=y
+CONFIG_PACKAGE_luci-app-msd_lite=y
 #删除插件
 CONFIG_PACKAGE_luci-app-alist=n
 CONFIG_PACKAGE_luci-theme-design=n
@@ -25,7 +26,6 @@ CONFIG_PACKAGE_luci-app-diskman=n
 CONFIG_PACKAGE_luci-app-fileassistant=n
 CONFIG_PACKAGE_luci-app-filetransfer=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
-CONFIG_PACKAGE_luci-app-msd_lite=n
 CONFIG_PACKAGE_luci-app-sqm=n
 CONFIG_PACKAGE_luci-app-unblockmusic=n
 CONFIG_PACKAGE_luci-app-vsftpd=n
