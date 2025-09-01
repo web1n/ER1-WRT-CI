@@ -11,7 +11,6 @@ luci-app-ddns
 luci-app-onliner
 luci-app-openvpn-server
 luci-app-samba4
-luci-app-socat
 luci-app-ttyd
 luci-app-zerotier
 luci-app-openlist2

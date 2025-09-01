@@ -5,10 +5,8 @@ DELETE_PACKAGE() {
 	local PKG_NAME=$1
 	rm -rf $(find ./ ../feeds/luci/ ../feeds/packages/ -maxdepth 3 -type d -iname "$PKG_NAME" -prune)
 }
-#DELETE_PACKAGE "socat"
 #DELETE_PACKAGE "openvpn-openssl"
 #DELETE_PACKAGE "openvpn-easy-rsa"
-#rm -rf ../feeds/packages/net/socat
 
 #安装和更新软件包(包含通配符)
 UPDATE_PACKAGE() {
@@ -36,7 +34,6 @@ UPDATE_PACKAGE "passwall" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "vlmcsd" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "luci-app-onliner" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "ddns-scripts-aliyun" "ftkey/openwrt_pkgs" "main" "pkg"
-UPDATE_PACKAGE "luci-app-socat" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "openlist2" "ftkey/openwrt_pkgs" "main" "pkg"
 
 

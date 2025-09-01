@@ -50,13 +50,6 @@ if [ -f "$TS_FILE" ]; then
 	cd $PKG_PATH && echo "tailscale has been fixed!"
 fi
 
-#修复Socat配置文件冲突
-SOCAT_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/socat/Makefile")
-if [ -f "$SOCAT_FILE" ]; then
-	sed -i '/\/files/d' $SOCAT_FILE
-	cd $PKG_PATH && echo "socat has been fixed!"
-fi
-
 #修复 OpenVPN 和 Easy-RSA 配置文件冲突
 OPENVPN_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/openvpn/Makefile")
 if [ -f "$OPENVPN_FILE" ]; then
