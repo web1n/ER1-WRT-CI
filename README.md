@@ -1,94 +1,44 @@
 # ER1-WRT-CI
 
-如需自定义, 请fork.
+京东云太乙ER1固件
 
-只编译（不带WiFi）: 
-
-    ipq60xx_DEVICE_jdcloud_re-cs-07=y # 京东云RE-CS-07 (太乙)
-    ipq60xx_DEVICE_jdcloud_re-ss-01=y # 京东云RE-SS-01 (亚瑟)
-
-可编译: 
-
-    ipq60xx_DEVICE_cmiot_ax18=y # 和目AX1800
-    ipq60xx_DEVICE_glinet_gl-ax1800=y # GL.iNet GL-AX1800
-    ipq60xx_DEVICE_glinet_gl-axt1800=y # GL.iNet GL-AXT1800
-    ipq60xx_DEVICE_jdcloud_re-ss-01=y # 京东云RE-SS-01 (亚瑟)
-    ipq60xx_DEVICE_jdcloud_re-cs-02=y # 京东云RE-CS-02 (雅典娜)
-    ipq60xx_DEVICE_qihoo_360v6=y # 奇虎360V6
-    ipq60xx_DEVICE_redmi_ax5-jdcloud=y # 红米AX5（京东云版）
-    ipq60xx_DEVICE_redmi_ax5=y # 红米AX5
-    ipq60xx_DEVICE_xiaomi_ax1800=y # 小米AX1800
-    ipq60xx_DEVICE_zn_m2=y # 兆能M2
-
-
-## 云编译OpenWRT固件
-[![QCA-ALL](https://github.com/ftkey/ER1-WRT-CI/actions/workflows/QCA-ALL.yml/badge.svg)](https://github.com/ftkey/ER1-WRT-CI/actions/workflows/QCA-ALL.yml)
-
-
-## 编译时间
-固件自动每天早上5点自动编译
-
-
-## 固件下载
-### OWRT 6.6.x: 
-<https://github.com/ftkey/ER1-WRT-CI/releases>
-### LiBwrt 6.12.x: 
-<https://github.com/ftkey/ER1-WRT-CI/releases>
-
-    
-### 固件源码(带NSS) 
-#### OWRT
-<https://github.com/VIKINGYFY/immortalwrt.git>
-
-#### LiBwrt
-<https://github.com/LiBwrt/openwrt-6.x.git>
-    
-## 刷机方法:
-### LibWRT & OWRT & QWRT:
-    Hugo Uboot + 原厂CDT + 单/双分区GPT
-    Uboot 刷入squashfs-factory.bin #第一次刷完5分钟,之后重启15秒开机。
-    Luci 刷入squashfs-sysupgrade.bin #不保留配置开机1分钟开机。
-
-
-## 刷UBoot方法:
-### 9008 & TTL下:
-<https://huawei.aito.eu.org/318.html>
-
-### SSH下:
-<https://github.com/ftkey/OpenWRT-CI/tree/uboot>
-
+带有 -12m 后缀的为 12m 内核固件，需要先从 uboot 刷入 6m 内核固件（factory 格式）后，再从 OpenWrt 后台刷入 12m 固件（sysupgrade 格式）。
 
 ## 软件包
-<details><summary>CONFIG_PACKAGE_luci-app-xxx=y</summary>
-    
-    ```
-    CONFIG_PACKAGE_luci-app-homeproxy=y // OWRT
-    CONFIG_PACKAGE_luci-app-alist=y  # Alist网络服务
-    CONFIG_PACKAGE_luci-app-cpufreq=y  # CPU频率策略控制
-    CONFIG_PACKAGE_luci-app-ddns=y  # 动态DNS客户端
-    CONFIG_PACKAGE_luci-app-openvpn-server=y  # OpenVPN服务器
-    CONFIG_PACKAGE_luci-app-samba4=y  # Samba文件共享
-    CONFIG_PACKAGE_luci-app-socat=y  # Socat端口转发工具
-    CONFIG_PACKAGE_luci-app-ttyd=y  # Web终端
-    CONFIG_PACKAGE_luci-app-zerotier=y  # ZeroTier虚拟网络
-    ```
+```
+luci-app-cpufreq
+luci-app-ddns
+luci-app-onliner
+luci-app-openvpn-server
+luci-app-samba4
+luci-app-socat
+luci-app-ttyd
+luci-app-zerotier
+luci-app-openlist2
+luci-app-frpc
+luci-app-wol
+luci-app-autoreboot
+luci-app-nlbwmon
+luci-app-upnp
+luci-app-vlmcsd
+luci-app-arpbind
+luci-app-smartdns
+```
 
-</details>
-<details><summary>CONFIG_PACKAGE_luci-app-xxx=n</summary>
-    
-    ```
-    
-    ```
+12m 内核固件增加的软件包:
+```
+luci-app-dae
+luci-app-daed
+```
 
-</details>
-
-
-
+## 固件源码(带NSS) 
+#### OWRT
+<https://github.com/VIKINGYFY/immortalwrt.git>
 
 ## THKS
 特别感谢QQ群:560094821
 
-VIKINGYFY | LiBwrt-op | ZqinKing | laipeng668 | ImmortalWRT | LEDE | MORE AND MORE
+ftkey | VIKINGYFY | LiBwrt-op | ZqinKing | laipeng668 | ImmortalWRT | LEDE | MORE AND MORE
 
 ## 特别提示
 本人不对任何人因使用本固件所遭受的任何理论或实际的损失承担责任！
