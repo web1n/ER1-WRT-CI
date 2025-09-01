@@ -1,1 +1,2 @@
+#JDCLOUD
 CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_jdcloud_re-cs-07=y
