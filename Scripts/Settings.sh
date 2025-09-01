@@ -128,6 +128,8 @@ fi
 
 # 增加 ER1 12M 内核支持
 cp ./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/ipq6010-re-cs-07.dts ./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/ipq6010-re-cs-07-12m.dts
+sed -i 's/model = "JDCloud RE-CS-07"/model = "JDCloud RE-CS-07 (12M)"/g' ./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/ipq6010-re-cs-07-12m.dts
+sed -i 's/compatible = "jdcloud,re-cs-07"/compatible = "jdcloud,re-cs-07-12m"/g' ./target/linux/qualcommax/files/arch/arm64/boot/dts/qcom/ipq6010-re-cs-07-12m.dts
 echo '
 define Device/jdcloud_re-cs-07-12m
 	$(call Device/FitImage)
