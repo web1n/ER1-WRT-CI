@@ -272,7 +272,7 @@ jobs:
           body: |
 
             **This is ${{ env.WRT_NAME }} OpenWrt Firmware for ${{ env.WRT_TYPE }}**
-            ### 📒 固件信息(无WIFI)
+            ### 📒 固件信息
             - 🖥️ 这是  ${{ env.WRT_TYPE }} 使用的 OpenWrt 固件
             - 💻 平台: ${{ env.WRT_TARGET }}
             - ⚽ 源码: ${{ env.WRT_SOURCE }}
