@@ -21,6 +21,7 @@ luci-app-upnp
 luci-app-vlmcsd
 luci-app-arpbind
 luci-app-smartdns
+luci-app-homeproxy
 luci-app-msd_lite
 ```
 
