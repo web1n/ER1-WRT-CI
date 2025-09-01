@@ -29,6 +29,7 @@ luci-app-msd_lite
 ```
 luci-app-dae
 luci-app-daed
+luci-app-dockerman
 ```
 
 ## 固件源码(带NSS) 
