@@ -13,7 +13,6 @@ luci-app-openvpn-server
 luci-app-samba4
 luci-app-ttyd
 luci-app-zerotier
-luci-app-openlist2
 luci-app-frpc
 luci-app-wol
 luci-app-autoreboot

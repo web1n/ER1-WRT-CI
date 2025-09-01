@@ -34,7 +34,6 @@ UPDATE_PACKAGE "passwall" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "vlmcsd" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "luci-app-onliner" "ftkey/openwrt_pkgs" "main" "pkg"
 UPDATE_PACKAGE "ddns-scripts-aliyun" "ftkey/openwrt_pkgs" "main" "pkg"
-UPDATE_PACKAGE "openlist2" "ftkey/openwrt_pkgs" "main" "pkg"
 
 
 
