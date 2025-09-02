@@ -14,3 +14,4 @@ CONFIG_KERNEL_XDP_SOCKETS=y
 
 CONFIG_PACKAGE_luci-app-dae=y
 CONFIG_PACKAGE_luci-app-daed=y
+CONFIG_PACKAGE_luci-app-netdata=y
