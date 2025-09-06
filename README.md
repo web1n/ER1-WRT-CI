@@ -10,6 +10,7 @@ luci-app-cpufreq
 luci-app-ddns
 luci-app-onliner
 luci-app-openvpn-server
+luci-app-openvpn
 luci-app-samba4
 luci-app-zerotier
 luci-app-frpc
