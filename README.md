@@ -22,6 +22,7 @@ luci-app-arpbind
 luci-app-smartdns
 luci-app-homeproxy
 luci-app-msd_lite
+luci-app-diskman
 ```
 
 12m 内核固件增加的软件包:
