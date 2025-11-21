@@ -42,8 +42,8 @@ jobs:
       matrix:
         TARGET: [ER1]
         REPO_INFO:
-          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: ImmortalWrt, SUFFIX: IMM, USEAPK: 'false'}
-          - {SOURCE: VIKINGYFY/immortalwrt, BRANCH: main, NAME: ImmortalWrt, SUFFIX: IMM-12M, USEAPK: 'false'}
+          - {SOURCE: web1n/immortalwrt, BRANCH: aic8800, NAME: ImmortalWrt, SUFFIX: IMM, USEAPK: 'false'}
+          - {SOURCE: web1n/immortalwrt, BRANCH: aic8800, NAME: ImmortalWrt, SUFFIX: IMM-12M, USEAPK: 'false'}
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
